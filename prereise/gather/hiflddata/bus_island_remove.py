@@ -1,5 +1,15 @@
-#!/usr/bin/env python
-# coding: utf-8
+"""
+Read data  (data populated by topology_validation.py)
+        -- bus.csv  sub.csv bus2sub.csv branch.csv
+Write data for grid simulation
+        -- bus.csv  sub.csv bus2sub.csv branch.csv
+Core Task
+        -- Remove islands in each U.S. interconnect region
+Core Subtask
+        -- Create the graph for the HIFLD transmission network
+        -- Find the max island for each U.S. interconnect region (EI, WECC, ERCOT)
+        -- Remove other small islands        
+"""
 
 import networkx as nx
 import pandas as pd
